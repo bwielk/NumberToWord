@@ -8,7 +8,7 @@ public class Converter {
 		int number = num;
 		StringJoiner result = new StringJoiner(" ");
 		String units[] = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
-		String teens[] = {"ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixtteen", "seventeen", "eighteen", "nineteen"};
+		String teens[] = {"ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"};
 		String tens[] = {"", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"};
 		
 		if(number >= 1000000 && number <= 9999999){

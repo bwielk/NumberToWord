@@ -17,32 +17,32 @@ public class ConverterTest {
 	
 	@Test
 	public void turn2intoTwo(){
-		int num = 2;
-		assertEquals("two", converter.run(num));
+		assertEquals("two", converter.run(2));
+		assertEquals("three", converter.run(3));
+		assertEquals("four", converter.run(4));
+		assertEquals("five", converter.run(5));
 	}
 	
 	@Test
 	public void turn0intoZero(){
-		int num = 0;
-		assertEquals("zero", converter.run(num));
+		assertEquals("zero", converter.run(0));
 	}
 	
 	@Test
 	public void turn10intoTen(){
-		int num = 10;
-		assertEquals("ten", converter.run(num));
+		assertEquals("ten", converter.run(10));
 	}
 	
 	@Test
-	public void turn19intoNineteen(){
-		int num = 19;
-		assertEquals("nineteen", converter.run(num));
+	public void turnTeensintoWords(){
+		assertEquals("nineteen", converter.run(19));
+		assertEquals("eighteen", converter.run(18));
+		assertEquals("seventeen", converter.run(17));
+		assertEquals("fourteen", converter.run(14));
+		assertEquals("twelve", converter.run(12));
+		assertEquals("eleven", converter.run(11));
 	}
 	
-	@Test
-	public void turn21intoTwentyOne(){
-		assertEquals("twenty one", converter.run(21));
-	}
 	
 	@Test
 	public void turns10sIntoTens(){
@@ -58,31 +58,68 @@ public class ConverterTest {
 	@Test
 	public void turns9000000intoNineMillion(){
 		assertEquals("nine million", converter.run(9000000));
+		assertEquals("eight million", converter.run(8000000));
+		assertEquals("seven million", converter.run(7000000));
+		assertEquals("six million", converter.run(6000000));
+		assertEquals("five million", converter.run(5000000));
+		assertEquals("four million", converter.run(4000000));
 	}
 	
 	@Test
 	public void turns3000intoThreeThousand(){
 		assertEquals("three thousand", converter.run(3000));
+		assertEquals("four thousand", converter.run(4000));
+		assertEquals("five thousand", converter.run(5000));
+		assertEquals("six thousand", converter.run(6000));
+		assertEquals("seven thousand", converter.run(7000));
+		assertEquals("eight thousand", converter.run(8000));
+		assertEquals("nine thousand", converter.run(9000));
 	}
 	
 	@Test
 	public void turns600intoSixHundred(){
 		assertEquals("six hundred", converter.run(600));
+		assertEquals("five hundred", converter.run(500));
+		assertEquals("four hundred", converter.run(400));
+		assertEquals("three hundred", converter.run(300));
+		assertEquals("two hundred", converter.run(200));
+		assertEquals("one hundred", converter.run(100));
+		assertEquals("nine hundred", converter.run(900));
 	}
 	
 	@Test
 	public void turns99IntoNinetyNine(){
 		assertEquals("ninety nine", converter.run(99));
+		assertEquals("eighty eight", converter.run(88));
+		assertEquals("seventy one", converter.run(71));
+		assertEquals("sixty five", converter.run(65));
+		assertEquals("fifty four", converter.run(54));
+		assertEquals("forty three", converter.run(43));
+		assertEquals("thirty four", converter.run(34));
+		assertEquals("twenty one", converter.run(21));
+		assertEquals("twenty", converter.run(20));
 	}
 	
 	@Test
 	public void turns300000IntoThreeHundredThousand(){
 		assertEquals("three hundred thousand", converter.run(300000));
+		assertEquals("four hundred thousand", converter.run(400000));
+		assertEquals("five hundred thousand", converter.run(500000));
+		assertEquals("six hundred thousand", converter.run(600000));
+		assertEquals("seven hundred thousand", converter.run(700000));
+		assertEquals("eight hundred thousand", converter.run(800000));
+		assertEquals("nine hundred thousand", converter.run(900000));
 	}
 	
 	@Test
 	public void turns13000IntoThirteenThousand(){
 		assertEquals("thirteen thousand", converter.run(13000));
+		assertEquals("fourteen thousand", converter.run(14000));
+		assertEquals("fifteen thousand", converter.run(15000));
+		assertEquals("sixteen thousand", converter.run(16000));
+		assertEquals("seventeen thousand", converter.run(17000));
+		assertEquals("eighteen thousand", converter.run(18000));
+		assertEquals("nineteen thousand", converter.run(19000));
 	}
 	
 	@Test
