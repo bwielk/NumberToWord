@@ -35,9 +35,19 @@ public class Converter {
 			number -=index*10;
 		}
 		
+		if(number >=10 && number<=19){
+			int index = number%10;
+			result.add(teens[index]);
+			number -= number;
+		}
+		
 		if(number >= 1 && number <=9){
 			result.add(units[number]);
 			number -=number;
+		}
+		
+		if(num == 0){
+			return units[0];
 		}
 		
 		return result.toString();
