@@ -43,6 +43,9 @@ public class Converter {
 			int index = number/1000;
 			result.add(units[index]).add("thousand");
 			number -=index*1000;
+			if(number != 0 && number<100){
+				result.add("and");
+			}
 		}
 		
 		if(number >= 100 && number <= 999){
