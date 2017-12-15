@@ -69,5 +69,10 @@ public class ConverterTest {
 	public void turns600intoSixHundred(){
 		assertEquals("six hundred", converter.run(600));
 	}
+	
+	@Test
+	public void turns99IntoNinetyNine(){
+		assertEquals("ninety nine", converter.run(99));
+	}
 
 }
