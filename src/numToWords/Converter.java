@@ -49,6 +49,9 @@ public class Converter {
 			int index = number/100;
 			result.add(units[index]).add("hundred");
 			number -=index*100;
+			if(number != 0){
+				result.add("and");
+			}
 		}
 		
 		if(number >= 20 && number <= 99){

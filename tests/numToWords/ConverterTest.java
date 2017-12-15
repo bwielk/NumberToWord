@@ -130,5 +130,19 @@ public class ConverterTest {
 		assertEquals("sixty seven thousand", converter.run(67000));
 		assertEquals("seventy five thousand", converter.run(75000));
 	}
+	
+	@Test
+	public void turnsHundredsWithTeensAndTensIntoWords(){
+		assertEquals("one hundred and one", converter.run(101));
+		assertEquals("one hundred and twelve", converter.run(112));
+		assertEquals("two hundred and twenty one", converter.run(221));
+		assertEquals("three hundred and thirty", converter.run(330));
+		assertEquals("four hundred and ninety eight", converter.run(498));
+		assertEquals("five hundred and eight", converter.run(508));
+		assertEquals("six hundred and fifty", converter.run(650));
+		assertEquals("seven hundred and eleven", converter.run(711));
+		assertEquals("eight hundred and ten", converter.run(810));
+		assertEquals("nine hundred and ninety nine", converter.run(999));
+	}
 
 }
