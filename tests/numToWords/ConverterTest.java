@@ -74,5 +74,24 @@ public class ConverterTest {
 	public void turns99IntoNinetyNine(){
 		assertEquals("ninety nine", converter.run(99));
 	}
+	
+	@Test
+	public void turns300000IntoThreeHundredThousand(){
+		assertEquals("three hundred thousand", converter.run(300000));
+	}
+	
+	@Test
+	public void turns13000IntoThirteenThousand(){
+		assertEquals("thirteen thousand", converter.run(13000));
+	}
+	
+	@Test
+	public void turns35000IntoThirtyFiveThousand(){
+		assertEquals("thirty one thousand", converter.run(31000));
+		assertEquals("forty six thousand", converter.run(46000));
+		assertEquals("fifty eight thousand", converter.run(58000));
+		assertEquals("sixty seven thousand", converter.run(67000));
+		assertEquals("seventy five thousand", converter.run(75000));
+	}
 
 }

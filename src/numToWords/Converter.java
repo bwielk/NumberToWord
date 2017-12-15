@@ -11,37 +11,59 @@ public class Converter {
 		String teens[] = {"ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixtteen", "seventeen", "eighteen", "nineteen"};
 		String tens[] = {"", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"};
 		
-		if(num >= 1000000 && num < 9999999){
+		if(number >= 1000000 && number <= 9999999){
 			int index = num/1000000;
 			result.add(units[index]).add("million");
 			number -=index*1000000;
 		}
 		
-		if(number>=1000 && number<=9999){
+		if(number >= 100000 && number <= 999999){
+			int index = number/100000;
+			result.add(units[index]).add("hundred thousand");
+			number -=index*100000;
+		}
+		
+		if(number >= 20000 && number <= 99999){
+			int numberBetween20And99 = number/1000;
+			result.add(tens[numberBetween20And99/10]);
+			if(numberBetween20And99%10 != 0){
+				result.add(units[numberBetween20And99%10]);
+			}
+			result.add("thousand");
+			number -= numberBetween20And99*1000;
+		}
+		
+		if(number >= 10000 && number <= 19999){
+			int index = (number%10000)/1000;
+			result.add(teens[index]).add("thousand");
+			number -= (10000+((number%10000)*1000));
+		}
+		
+		if(number >= 1000 && number <= 9999){
 			int index = number/1000;
 			result.add(units[index]).add("thousand");
 			number -=index*1000;
 		}
 		
-		if(number>=100 && number<=999){
+		if(number >= 100 && number <= 999){
 			int index = number/100;
 			result.add(units[index]).add("hundred");
 			number -=index*100;
 		}
 		
-		if(number >=20 && number<=99){
+		if(number >= 20 && number <= 99){
 			int index = number/10;
 			result.add(tens[index]);
 			number -=index*10;
 		}
 		
-		if(number >=10 && number<=19){
+		if(number >= 10 && number <= 19){
 			int index = number%10;
 			result.add(teens[index]);
 			number -= number;
 		}
 		
-		if(number >= 1 && number <=9){
+		if(number >= 1 && number <= 9){
 			result.add(units[number]);
 			number -=number;
 		}
