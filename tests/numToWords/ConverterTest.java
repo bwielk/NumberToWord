@@ -157,5 +157,16 @@ public class ConverterTest {
 		assertEquals("eight thousand eight hundred and seventy three", converter.run(8873));
 		assertEquals("one thousand and fifty one", converter.run(1051));
 	}
+	
+	@Test
+	public void translatesNumbersBetween10000and99999(){
+		assertEquals("eleven thousand two hundred and thirty four", converter.run(11234));
+		assertEquals("twenty five thousand six hundred and seventy eight", converter.run(25678));
+		assertEquals("thirty thousand two hundred and one", converter.run(30201));
+		assertEquals("forty five thousand nine hundred and ninety one", converter.run(45991));
+		assertEquals("fifty nine thousand and twenty", converter.run(59020));
+		assertEquals("sixty eight thousand eight hundred and twenty three", converter.run(68823));
+		assertEquals("seventy four thousand six hundred and sixty one", converter.run(74661));
+	}
 
 }

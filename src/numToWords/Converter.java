@@ -31,12 +31,15 @@ public class Converter {
 			}
 			result.add("thousand");
 			number -= numberBetween20And99*1000;
+			if(number !=0 && number <100){
+				result.add("and");
+			}
 		}
 		
 		if(number >= 10000 && number <= 19999){
 			int index = (number%10000)/1000;
 			result.add(teens[index]).add("thousand");
-			number -= (10000+((number%10000)*1000));
+			number -= (10000+((index)*1000));
 		}
 		
 		if(number >= 1000 && number <= 9999){
