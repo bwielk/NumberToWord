@@ -9,10 +9,22 @@ public class Converter {
 		String teens[] = {"ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixtteen", "seventeen", "eighteen", "nineteen"};
 		String tens[] = {"", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"};
 		
-		if(num >= 1000000){
+		if(num >= 1000000 && num < 9999999){
 			int index = num/1000000;
 			result = units[index] + " million";
-			num -=number*1000000;
+			number -=index*1000000;
+		}
+		
+		if(number>=1000 && number<=9999){
+			int index = number/1000;
+			result = units[index] + " thousand";
+			number -=index*1000;
+		}
+		
+		if(number>=100 && number<=999){
+			int index = number/100;
+			result = units[index] + " hundred";
+			number -=index*100;
 		}
 		
 		/*if(num <=9){

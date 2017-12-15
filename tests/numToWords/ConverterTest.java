@@ -59,5 +59,15 @@ public class ConverterTest {
 	public void turns9000000intoNineMillion(){
 		assertEquals("nine million", converter.run(9000000));
 	}
+	
+	@Test
+	public void turns3000intoThreeThousand(){
+		assertEquals("three thousand", converter.run(3000));
+	}
+	
+	@Test
+	public void turns600intoSixHundred(){
+		assertEquals("six hundred", converter.run(600));
+	}
 
 }
