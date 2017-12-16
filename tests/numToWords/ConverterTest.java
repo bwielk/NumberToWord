@@ -198,4 +198,18 @@ public class ConverterTest {
 		assertEquals("eight million twenty two thousand three hundred and ten",converter.run(8022310));
 		assertEquals("nine million nine hundred thousand and nine",converter.run(9900009));
 	}
+	
+	@Test
+	public void transaltesNumbersFrom10000000and19999999(){
+		assertEquals("ten million two hundred and thirty four thousand and one", converter.run(10234001));
+		assertEquals("eleven million and one", converter.run(11000001));
+		assertEquals("twelve million and twenty one", converter.run(12000021));
+		assertEquals("thirteen million five hundred and one", converter.run(13000501));
+		assertEquals("fourteen million three thousand and sixty one", converter.run(14003061));
+		assertEquals("fifteen million thirty four thousand and one", converter.run(15034001));
+		assertEquals("sixteen million two hundred and thirty four thousand one hundred and thirty two", converter.run(16234132));
+		assertEquals("seventeen million eight hundred and thirty four thousand one hundred and thirty two", converter.run(17834132));
+		assertEquals("eighteen million nine hundred and thirty thousand three hundred and thirty", converter.run(18930330));
+		assertEquals("nineteen million six hundred and four thousand nine hundred ninety nine", converter.run(19604999));
+	}
 }
