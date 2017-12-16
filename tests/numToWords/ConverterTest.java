@@ -216,6 +216,8 @@ public class ConverterTest {
 		assertEquals("five hundred and twenty one thousand one hundred and twenty three", converter.run(521123));
 		assertEquals("six hundred thousand and one", converter.run(600001));
 		assertEquals("nine hundred thousand four hundred and thirty one", converter.run(900431));
+		assertEquals("nine hundred and ninety nine thousand nine hundred and ninety nine", converter.run(999999));
+		assertEquals("eight hundred and eighty eight thousand eight hundred and eighty eight", converter.run(888888));
 		assertEquals("one hundred thousand and twenty one", converter.run(100021));
 		assertEquals("eight hundred and thirty three thousand three hundred and thirty one", converter.run(833331));
 		assertEquals("seven hundred and nine thousand one hundred and two", converter.run(709102));
@@ -275,7 +277,7 @@ public class ConverterTest {
 		assertEquals("three hundred and twelve million three hundred and seven thousand one hundred and sixty six", converter.run(312307166));
 		assertEquals("four hundred and fifty six million eighty thousand nine hundred and eighty one", converter.run(456080981));
 		assertEquals("five hundred and fifty one million fifty five thousand two hundred", converter.run(551055200));
-		assertEquals("six hundred and seventy million nine hundred and thirty four thousand four", converter.run(670934004));
+		assertEquals("six hundred and seventy million nine hundred and thirty four thousand and four", converter.run(670934004));
 		assertEquals("seven hundred and seventy one million fifty four thousand nine hundred and ninety nine", converter.run(771054999));
 		assertEquals("seven hundred and ninety eight million one hundred and one thousand three hundred and twenty", converter.run(798101320));
 		assertEquals("nine hundred and ninety nine million ninety thousand and twenty three", converter.run(999090023));

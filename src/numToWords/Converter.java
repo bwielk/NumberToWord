@@ -12,7 +12,7 @@ public class Converter {
 		String tens[] = {"", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"};
 		
 		if(number >= 100000000 && number <= 999999999){
-			if(number/1000000 >= 100 && number/1000000 <= 999 && number%1000000 >= 1000000 && number%1000000 <= 99999999){
+			if(number%100000000 >= 1000000 && number%100000000 <= 99999999){
 				int index = number/100000000;
 				result.add(units[index]).add("hundred and");
 				number -= index*100000000;
@@ -133,6 +133,7 @@ public class Converter {
 			return units[0];
 		}
 		
+		System.out.print(result.toString());
 		return result.toString();
 	}
 }
