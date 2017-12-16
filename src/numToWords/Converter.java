@@ -18,7 +18,7 @@ public class Converter {
 		}
 		
 		if(number >= 100000 && number <= 999999){
-			if(number/1000 >= 100 && number/1000 <= 999 && number%100000 != 0){
+			if(number/1000 >= 100 && number/1000 <= 999 && number%100000 >= 10000 && number%100000 <= 99999){
 				int index = number/100000;
 				result.add(units[index]).add("hundred and");
 				number-=(number/100000)*100000;

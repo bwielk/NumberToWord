@@ -173,11 +173,13 @@ public class ConverterTest {
 	public void translatesNumbersBetween100000and999999(){
 		assertEquals("one hundred and twelve thousand three hundred and forty five", converter.run(112345));
 		assertEquals("two hundred and eighty seven thousand three hundred and one", converter.run(287301));
-		assertEquals("three hundred and three thousand one hundred and ninety three", converter.run(303193));
 		assertEquals("four hundred and ninety two thousand and nine", converter.run(492009));
 		assertEquals("five hundred and twenty one thousand one hundred and twenty three", converter.run(521123));
 		assertEquals("six hundred thousand and one", converter.run(600001));
-		assertEquals("seven hundred and nine thousand one hundred and two", converter.run(709102));
+		assertEquals("nine hundred thousand four hundred and thirty one", converter.run(900431));
+		assertEquals("one hundred thousand and twenty one", converter.run(100021));
 		assertEquals("eight hundred and thirty three thousand three hundred and thirty one", converter.run(833331));
+		assertEquals("seven hundred and nine thousand one hundred and two", converter.run(709102));
+		assertEquals("three hundred and three thousand one hundred and ninety three", converter.run(303193));
 	}
 }
