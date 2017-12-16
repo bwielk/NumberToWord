@@ -11,6 +11,26 @@ public class Converter {
 		String teens[] = {"ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"};
 		String tens[] = {"", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"};
 		
+		if(number >= 100000000 && number <= 999999999){
+			int index = number/100000000;
+			if(number/1000000 >= 100 && number/1000000 <= 999){
+				result.add(units[(number/1000000)/100]);
+			}else{
+				result.add(units[index]).add("hundred million");
+			}
+			
+		}
+		
+		if(number >= 20000000 && number <= 99999999){
+			int numberBetween20and99 = number/1000000;
+			result.add(tens[numberBetween20and99/10]);
+			if(numberBetween20and99%10 != 0){
+				result.add(units[numberBetween20and99%10]);
+			}
+			result.add("million");
+			number -= numberBetween20and99*10000000;
+		}
+		
 		if(number >= 10000000 && number <= 19999999){
 			int index = (number/1000000)%10;
 			result.add(teens[index]).add("million");

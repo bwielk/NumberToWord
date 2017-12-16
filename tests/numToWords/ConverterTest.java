@@ -112,7 +112,7 @@ public class ConverterTest {
 		assertEquals("eighty nine million", converter.run(89000000));
 		assertEquals("ninety two million", converter.run(92000000));
 		assertEquals("ninety five million", converter.run(95000000));
-		assertEquals("ninenty nine million", converter.run(99000000));
+		assertEquals("ninety nine million", converter.run(99000000));
 	}
 	
 	@Test
