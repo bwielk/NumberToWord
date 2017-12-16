@@ -101,11 +101,33 @@ public class ConverterTest {
 	}
 	
 	@Test
-	public void turns3000000IntoThreeMillion(){
-		assertEquals("three million", converter.run(3000000));
-		assertEquals("five million", converter.run(5000000));
-		assertEquals("eight million", converter.run(8000000));
-		assertEquals("one million", converter.run(1000000));
+	public void turns21000000IntoTwentyOneMillion(){
+		assertEquals("twenty one million", converter.run(21000000));
+		assertEquals("thirty million", converter.run(30000000));
+		assertEquals("forty two million", converter.run(42000000));
+		assertEquals("fifty three million", converter.run(53000000));
+		assertEquals("sixty four million", converter.run(64000000));
+		assertEquals("sixty nine million", converter.run(69000000));
+		assertEquals("seventy million", converter.run(70000000));
+		assertEquals("eighty nine million", converter.run(89000000));
+		assertEquals("ninety two million", converter.run(92000000));
+		assertEquals("ninety five million", converter.run(95000000));
+		assertEquals("ninenty nine million", converter.run(99000000));
+	}
+	
+	@Test
+	public void turns112000000IntoOneHundredAndTwelveMillion(){
+		assertEquals("one hundred and twenty one million", converter.run(121000000));
+		assertEquals("two hundred and thirty million", converter.run(230000000));
+		assertEquals("three hundred and forty two million", converter.run(342000000));
+		assertEquals("four hundred and fifty three million", converter.run(453000000));
+		assertEquals("five hundred and sixty four million", converter.run(564000000));
+		assertEquals("six hundred and sixty nine million", converter.run(669000000));
+		assertEquals("seven hundred and seventy million", converter.run(770000000));
+		assertEquals("eight hundred and eighty nine million", converter.run(889000000));
+		assertEquals("nine hundred and ninety two million", converter.run(992000000));
+		assertEquals("one hundred and ninety five million", converter.run(195000000));
+		assertEquals("nine hundred and ninenty nine million", converter.run(999000000));
 	}
 	
 	@Test
