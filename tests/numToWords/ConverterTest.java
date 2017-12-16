@@ -127,7 +127,7 @@ public class ConverterTest {
 		assertEquals("eight hundred and eighty nine million", converter.run(889000000));
 		assertEquals("nine hundred and ninety two million", converter.run(992000000));
 		assertEquals("one hundred and ninety five million", converter.run(195000000));
-		assertEquals("nine hundred and ninenty nine million", converter.run(999000000));
+		assertEquals("nine hundred and ninety nine million", converter.run(999000000));
 	}
 	
 	@Test
@@ -250,6 +250,6 @@ public class ConverterTest {
 		assertEquals("sixteen million two hundred and thirty four thousand one hundred and thirty two", converter.run(16234132));
 		assertEquals("seventeen million eight hundred and thirty four thousand one hundred and thirty two", converter.run(17834132));
 		assertEquals("eighteen million nine hundred and thirty thousand three hundred and thirty", converter.run(18930330));
-		assertEquals("nineteen million six hundred and four thousand nine hundred ninety nine", converter.run(19604999));
+		assertEquals("nineteen million six hundred and four thousand nine hundred and ninety nine", converter.run(19604999));
 	}
 }
