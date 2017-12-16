@@ -253,16 +253,33 @@ public class ConverterTest {
 		assertEquals("nineteen million six hundred and four thousand nine hundred and ninety nine", converter.run(19604999));
 	}
 	
+	@Test
 	public void transaltesNumbersFrom20000000To99999999(){
 		assertEquals("twenty one million and twenty one", converter.run(21000021));
 		assertEquals("thirty two million three hundred and twenty three", converter.run(32000323));
-		assertEquals("forty three million seven thousand six hundred thirty two", converter.run(43007632));
+		assertEquals("forty three million seven thousand six hundred and thirty two", converter.run(43007632));
 		assertEquals("fifty four million ten thousand and ten", converter.run(54010010));
-		assertEquals("sixty million two hundred and thirty four thousand forty one", converter.run(60234041));
+		assertEquals("sixty million two hundred and thirty four thousand and forty one", converter.run(60234041));
 		assertEquals("seventy six million nine hundred and ninety thousand two hundred and fifteen", converter.run(76990215));
 		assertEquals("eighty three million two hundred and twenty three thousand five hundred and five", converter.run(83223505));
-		assertEquals("ninety eight million nine hundred and eighty four thousand two hundred and twenty", converter.run(98984221));
+		assertEquals("ninety eight million nine hundred and eighty four thousand two hundred and twenty one"	+ "", converter.run(98984221));
 		assertEquals("ninety nine million nine thousand nine hundred and ninety", converter.run(99009990));	
 		assertEquals("ten million one hundred thousand and one", converter.run(10100001));	
+	}
+	
+	@Test
+	public void translatesNumbersFrom100000000to999999999MAX(){
+		assertEquals("one hundred and eleven million and eleven", converter.run(111000011));
+		assertEquals("one hundred million and two", converter.run(100000002));
+		assertEquals("two hundred and one million and twenty three", converter.run(201000023));
+		assertEquals("three hundred and twelve million three hundred and seven thousand one hundred and sixty six", converter.run(312307166));
+		assertEquals("four hundred and fifty six million eighty thousand nine hundred and eighty one", converter.run(456080981));
+		assertEquals("five hundred and fifty one million fifty five thousand two hundred", converter.run(551055200));
+		assertEquals("six hundred and seventy million nine hundred and thirty four thousand four", converter.run(670934004));
+		assertEquals("seven hundred and seventy one million fifty four thousand nine hundred and ninety nine", converter.run(771054999));
+		assertEquals("seven hundred and ninety eight million one hundred and one thousand three hundred and twenty", converter.run(798101320));
+		assertEquals("nine hundred and ninety nine million ninety thousand and twenty three", converter.run(999090023));
+		assertEquals("eight hundred and eighty eight million one thousand and eleven", converter.run(888001011));
+		assertEquals("five hundred and eighty eight million two hundred and twenty one thousand and ninety three", converter.run(588221093));
 	}
 }

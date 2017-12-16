@@ -12,10 +12,17 @@ public class Converter {
 		String tens[] = {"", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"};
 		
 		if(number >= 100000000 && number <= 999999999){
-			result.add(units[number/100000000]).add("hundred");
-			number -= (number/100000000)*100000000;
-			if(number != 0 && number >= 1000000){
-				result.add("and");
+			if(number/1000000 >= 100 && number/1000000 <= 999 && number%1000000 >= 1000000 && number%1000000 <= 99999999){
+				int index = number/100000000;
+				result.add(units[index]).add("hundred and");
+				number -= index*100000000;
+			}else{
+				int index = number/100000000;
+				result.add(units[index]).add("hundred million");
+				number -= index*100000000;
+				if(number != 0 && number < 100){
+					result.add("and");
+				}
 			}
 		}
 		
@@ -27,6 +34,9 @@ public class Converter {
 			}
 			result.add("million");
 			number -= numberBetween20and99*1000000;
+			if(number<100 && number != 0){
+				result.add("and");
+			}
 		}
 		
 		if(number >= 10000000 && number <= 19999999){
@@ -79,6 +89,9 @@ public class Converter {
 			int index = (number%10000)/1000;
 			result.add(teens[index]).add("thousand");
 			number -= (10000+((index)*1000));
+			if(number !=0 && number < 100){
+				result.add("and");
+			}
 		}
 		
 		if(number >= 1000 && number <= 9999){
