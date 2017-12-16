@@ -190,12 +190,12 @@ public class ConverterTest {
 	public void transaltesNumbersBetween1000000and9999999(){
 		assertEquals("one million two hundred and thirty four thousand five hundred and sixty seven",converter.run(1234567));
 		assertEquals("two million and one",converter.run(2000001));
-		assertEquals("three million and twelve thousand three hundred and two",converter.run(3012302));
+		assertEquals("three million twelve thousand three hundred and two",converter.run(3012302));
 		assertEquals("four million one hundred and twenty nine thousand and two",converter.run(4129002));
 		assertEquals("five million two thousand one hundred and twenty",converter.run(5002120));
-		assertEquals("six million and twenty nine thousand and two",converter.run(6029002));
+		assertEquals("six million twenty nine thousand and two",converter.run(6029002));
 		assertEquals("seven million seven hundred and seventy seven thousand seven hundred and seventy seven",converter.run(7777777));
-		assertEquals("eight million and twenty two thousand three hundred and ten",converter.run(8022310));
+		assertEquals("eight million twenty two thousand three hundred and ten",converter.run(8022310));
 		assertEquals("nine million nine hundred thousand and nine",converter.run(9900009));
 	}
 }

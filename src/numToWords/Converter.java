@@ -15,6 +15,9 @@ public class Converter {
 			int index = num/1000000;
 			result.add(units[index]).add("million");
 			number -=index*1000000;
+			if(number < 100 && number !=0){
+				result.add("and");
+			}
 		}
 		
 		if(number >= 100000 && number <= 999999){
