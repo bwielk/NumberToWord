@@ -181,5 +181,8 @@ public class ConverterTest {
 		assertEquals("eight hundred and thirty three thousand three hundred and thirty one", converter.run(833331));
 		assertEquals("seven hundred and nine thousand one hundred and two", converter.run(709102));
 		assertEquals("three hundred and three thousand one hundred and ninety three", converter.run(303193));
+		assertEquals("eight hundred and twelve thousand eight hundred and thirteen", converter.run(812813));
+		assertEquals("one hundred and one thousand one hundred and one", converter.run(101101));
+		assertEquals("two hundred and thirty four thousand and one", converter.run(234001));
 	}
 }
