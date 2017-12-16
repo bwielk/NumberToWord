@@ -101,6 +101,23 @@ public class ConverterTest {
 	}
 	
 	@Test
+	public void turns3000000IntoThreeMillion(){
+		assertEquals("three million", converter.run(3000000));
+		assertEquals("five million", converter.run(5000000));
+		assertEquals("eight million", converter.run(8000000));
+		assertEquals("one million", converter.run(1000000));
+	}
+	
+	@Test
+	public void turns15000000IntoFifteenMillion(){
+		assertEquals("fifteen million", converter.run(15000000));
+		assertEquals("sixteen million", converter.run(16000000));
+		assertEquals("seventeen million", converter.run(17000000));
+		assertEquals("eighteen million", converter.run(18000000));
+		assertEquals("nineteen million", converter.run(19000000));
+	}
+	
+	@Test
 	public void turns300000IntoThreeHundredThousand(){
 		assertEquals("three hundred thousand", converter.run(300000));
 		assertEquals("four hundred thousand", converter.run(400000));
@@ -201,6 +218,7 @@ public class ConverterTest {
 	
 	@Test
 	public void transaltesNumbersFrom10000000and19999999(){
+		assertEquals("ten million", converter.run(10000000));
 		assertEquals("ten million two hundred and thirty four thousand and one", converter.run(10234001));
 		assertEquals("eleven million and one", converter.run(11000001));
 		assertEquals("twelve million and twenty one", converter.run(12000021));

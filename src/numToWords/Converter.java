@@ -11,8 +11,14 @@ public class Converter {
 		String teens[] = {"ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"};
 		String tens[] = {"", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"};
 		
+		if(number >= 10000000 && number <= 19999999){
+			int index = (number/1000000)%10;
+			result.add(teens[index]).add("million");
+			number -= (index*10)*1000000;
+		}
+		
 		if(number >= 1000000 && number <= 9999999){
-			int index = num/1000000;
+			int index = number/1000000;
 			result.add(units[index]).add("million");
 			number -=index*1000000;
 			if(number < 100 && number !=0){
