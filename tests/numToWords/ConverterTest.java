@@ -173,6 +173,7 @@ public class ConverterTest {
 	@Test
 	public void turnsHundredsWithTeensAndTensIntoWords(){
 		assertEquals("one hundred and one", converter.run(101));
+		assertEquals("one hundred and ten", converter.run(110));
 		assertEquals("one hundred and twelve", converter.run(112));
 		assertEquals("two hundred and twenty one", converter.run(221));
 		assertEquals("three hundred and thirty", converter.run(330));
@@ -189,6 +190,7 @@ public class ConverterTest {
 		assertEquals("one thousand three hundred and sixty five", converter.run(1365));
 		assertEquals("two thousand four hundred and one", converter.run(2401));
 		assertEquals("three thousand and eleven", converter.run(3011));
+		assertEquals("three thousand and ten", converter.run(3010));
 		assertEquals("five thousand and sixty nine", converter.run(5069));
 		assertEquals("six thousand seven hundred and eighty nine", converter.run(6789));
 		assertEquals("seven thousand eight hundred and five", converter.run(7805));
