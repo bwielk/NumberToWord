@@ -133,7 +133,6 @@ public class Converter {
 			return units[0];
 		}
 		
-		System.out.print(result.toString());
 		return result.toString();
 	}
 }
